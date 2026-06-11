@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>赵泳淇 · 大三学生简历</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: 'Inter', sans-serif;
+            color: #1e2a3a;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        /* 主卡片 */
+        .resume-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.12);
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        /* 顶部简介区域 */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 2rem 1.8rem 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .tagline {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-bottom: 1.2rem;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.85rem;
+            background: rgba(255,255,255,0.12);
+            padding: 0.8rem 1rem;
+            border-radius: 50px;
+            margin-top: 0.5rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .contact-info i {
+            width: 20px;
+        }
+
+        /* 主体内容 */
+        .content {
+            padding: 2rem;
+        }
+
+        /* 区块标题 */
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            border-left: 4px solid #2a5298;
+            padding-left: 12px;
+            color: #1e2a3a;
+        }
+
+        /* 教育卡片 */
+        .edu-item {
+            background: #f8fafc;
+            padding: 1rem 1.2rem;
+            border-radius: 20px;
+            margin-bottom: 1.5rem;
+        }
+
+        .edu-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .edu-major {
+            font-weight: 500;
+            color: #2c3e66;
+            margin: 5px 0;
+        }
+
+        .edu-date {
+            font-size: 0.8rem;
+            color: #5b6e8c;
+            margin-top: 4px;
+        }
+
+        /* 技能标签 */
+        .skills-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 1rem 0 1.5rem;
+        }
+        .skill-tag {
+            background: #eef2ff;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e3c72;
+            transition: 0.2s;
+        }
+        .skill-tag:hover {
+            background: #d9e2fc;
+            transform: translateY(-2px);
+        }
+
+        /* 亮点列表 */
+        .highlight-list {
+            list-style: none;
+            margin: 0.5rem 0 1rem;
+        }
+        .highlight-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .highlight-list i {
+            color: #2a5298;
+            width: 22px;
+            font-size: 1rem;
+        }
+
+        /* 课程学习 */
+        .course-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 0.8rem;
+        }
+        .course-badge {
+            background: #f1f5f9;
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #334155;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* 响应式 */
+        @media (max-width: 650px) {
+            .hero {
+                padding: 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .contact-info {
+                flex-direction: column;
+                gap: 0.6rem;
+                border-radius: 24px;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+        }
+
+        /* 打印优化 */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume-card {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #6c86a3;
+            margin-top: 1rem;
+            border-top: 1px solid #eef2f8;
+            padding-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div class="resume-card">
+    <div class="hero">
+        <h1>赵泳淇</h1>
+        <div class="tagline">数据科学与大数据技术 · 大三学生 | 热爱编程，勤奋踏实</div>
+        <div class="contact-info">
+            <span><i class="fas fa-phone-alt"></i> 18987449839</span>
+            <span><i class="fas fa-envelope"></i> 2311704676@qq.com</span>
+            <span><i class="fas fa-map-marker-alt"></i> 云南 · 昆明学院</span>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- 教育背景 -->
+        <div class="section-title"><i class="fas fa-graduation-cap" style="margin-right: 8px;"></i> 教育背景</div>
+        <div class="edu-item">
+            <div class="edu-title">昆明学院</div>
+            <div class="edu-major">数据科学与大数据技术 · 本科 | 大三</div>
+            <div class="edu-date">2023年9月 — 2027年6月 (预计毕业)</div>
+            <div style="margin-top: 8px; font-size: 0.9rem; color: #2c3e66;">主修课程：Python程序设计、数据结构、数据库原理、Web前端开发、大数据技术基础</div>
+        </div>
+
+        <!-- 专业技能 -->
+        <div class="section-title"><i class="fas fa-code"></i> 专业技能</div>
+        <div class="skills-box">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">HTML5 / CSS3</span>
+            <span class="skill-tag">JavaScript (基础)</span>
+            <span class="skill-tag">SQL / MySQL</span>
+            <span class="skill-tag">Git 基础</span>
+            <span class="skill-tag">Linux 基础命令</span>
+        </div>
+
+        <!-- 个人亮点 / 自我评价 -->
+        <div class="section-title"><i class="fas fa-star"></i> 个人亮点</div>
+        <ul class="highlight-list">
+            <li><i class="fas fa-heart"></i> 热爱编程，习惯主动学习新技术，课余时间完成多个前端小项目</li>
+            <li><i class="fas fa-tasks"></i> 勤奋踏实，团队协作意识强，善于沟通与解决问题</li>
+            <li><i class="fas fa-chart-line"></i> 持续学习大数据相关技术，对数据分析和可视化有浓厚兴趣</li>
+            <li><i class="fas fa-certificate"></i> 英语四级 (CET-4) 备考中，具备阅读技术文档能力</li>
+        </ul>
+
+        <!-- 相关课程与实践 -->
+        <div class="section-title"><i class="fas fa-laptop-code"></i> 课程实践</div>
+        <div class="course-wrap">
+            <span class="course-badge">Python 数据分析小作业</span>
+            <span class="course-badge">静态个人网页设计</span>
+            <span class="course-badge">MySQL 学生管理系统设计</span>
+            <span class="course-badge">团队课程设计《图书管理系统》</span>
+        </div>
+        <div style="margin-top: 12px; font-size: 0.85rem; color: #4a627a;">
+            📌 在校期间认真完成专业实验与课程设计，熟悉项目开发的基本流程，具备良好的代码习惯。
+        </div>
+
+        <hr>
+
+        <!-- 附加信息 / 证书 -->
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+            <div>
+                <i class="fas fa-award" style="color: #2a5298;"></i> <strong>证书 & 荣誉</strong><br>
+                <span style="font-size: 0.85rem;">暂无</span>
+            </div>
+            <div>
+                <i class="fas fa-language" style="color: #2a5298;"></i> <strong>语言能力</strong><br>
+                <span style="font-size: 0.85rem;">中文 (母语) · 英语 (读写能力良好，CET-4 备考)</span>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
